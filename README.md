@@ -1,66 +1,39 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Document Management System
+Where you can create documents and attach them to tags belonging to specific categories created by the admin.
+As a user, you can comment on these documents or categories, and you can also download the documents
+In addition, you can follow categories, and this will keep you fully informed of this category
+By sending an email to your account
+And through notifications prepared in Firebase to enjoy the real-time feature.
+In addition to calculating the number of visitors to documents and categories.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+## Installation
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+You Must run the migrations and seeders:
+```bash
+php artisan migrate --seed
+```
+The queue must also be running
+```bash
+php artisan queue:work
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Usage
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+You must create an account or log in with the owner account to be able to send all requests
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Owner Information :
+```json
+{
+    'first_name': 'yousef',
+    'last_name': 'saleh',
+    'email': 'yousefsaleh.888.it@gmail.com',
+    'password': 'owner1234'
+}
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+You Can View The API Documentation via ([The Link](https://documenter.getpostman.com/view/30507236/2sA3JRXyM1)).
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+You can see the ERD diagram ([here](https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=DocumentManagementSystem.drawio%20(1).html#R7V1bd9o4F%2F01PGYWvnB7DEnaTifJN5M0k%2BlTloMFeGJsYpsG5td%2FErbMRQZkB5AsnbZrFQsjg84%2B2tI%2BR1LDuprMv0bOdHwXushvmE133rCuGyb%2BY3fwf6RkkZYYvW4zLRlFnpuVrQoevf9QVkhvm3kuijduTMLQT7zpZuEgDAI0SDbKnCgKPzZvG4b%2B5lOnzggxBY8Dx2dLnz03GaelXbOzKv%2BGvNGYPtlo99J3Jg69Ofsl8dhxw4%2B1IuumYV1FYZikrybzK%2BST1qPt8vz74tm%2FfWt%2F%2Ff5X%2FO489f%2F4cf%2F3RVrZlzIfyX9ChIKkctV%2FJRN%2Fbse%2Bfdu8ufjf9cM0CG5p1b8cf5a111OMouz3JgvaiPinT8nLxHklRf04caIks7XVxAXYeonjBfij1rWxvPZ9Zxp7y9vTkrHnu7fOIpwltCJ61R96c%2BQ%2BpKYm92Kr3%2BLKyCWpfIgrf8y%2BDHnb8b1RgF8PcHOQJ%2FYjFOPvcuvESXbHGP%2FW7KXvvCK%2F7wzeRlE4C9yr0A%2FJlwzCAC2f7Pu0qGFaX1qX%2FVZz%2BQOj8A2tvdNrkr%2FZl1krNy7JX1zOaSPa4ChK0HwNoZnNvqJwgpJogW%2Bh7zYz%2BFEHtLLrjxWaDeqT4zUkm3ZW6GQeNMrrXqEEv8iAUgI0JgOa%2FYB5IF7TH4eR9x%2BBiZ%2BZdR1Ey%2BsPb%2BI7AXZHx90q6ofL%2Fqe5ZbHMiJtgIze5UTj94UQjlGQF09ALkmU7tPr4H26Zq%2BZvrUYLf9crfG2srvE%2FcnuEjRxgFGBQkzoQxtYHIvjqJ%2BE0q9RHQ1p%2FlLU7ef0aJkk44YLfMWC2168PwyyDFS%2BqrFOBymJA9ecfO2GFf3%2FiOf4DJgwnGPkpCJb84axAUICUQtvl9to25Ha%2FE%2BLmHPpLChh7rotwH9T%2FGHsJepw6A3LTB%2BbQMr3Pycxvcpt%2Fzd5WSXNnla2MULo2x8f9d%2BAk2L9x48QMhvLvWR1WNktwgfc%2BQ79fCwYXJbH03n6MIeQFo9v0k%2B0t9LUURd98d%2BfTOioauao7AxxbQJ1c1NmsEXW2RVNnmx9U5%2BnbkOvR%2BurFmy1u26vOmx0GU0MvipOXwJkg2ZlTRbxpx5RdYErlmLInmil7wJRHsn2X2%2FaqMyUVutdA5TvAlMLwph1TGqyID1RZd6o0TNFcaZSQ%2BYEs91uf3%2FzKsyWr86OJ4%2FnAlALAph9V2sCMtWfGlnBmbAERVjS2zW1t5YmQVe2nThx%2FhJELXCgAbypz4dvP9rfvw3fj%2BdG2n%2B7fXx%2Bf7%2F69MLrAhbXnwu4ZubAYRT3gwoPG3ut%2FenFhYVNQrWONC7340p14AVChALhpR4U0SRyosL5UmC84EEaFoI9W7ZtMLfXR4qZg9VEX%2FfIG6CXBbQ98KAJzKvNhcefLZn9d4QeOwqyXVGRpUHls7VoutB%2FDLCKPtDSIQiOjQJuXAvPg4vGlUUjb4htaVcNfWZzt9%2B76LA6iKoNiq4NEAUBL5aF4qQqrPGi0Pkh%2B%2FGk39DIhmYtfm6gNgQpfIkRRpFIylyDr6ylWFDcFK1YomvUsP9ZUZspCAacJvFh7XjzngqDiqBiw4EFb7%2FM%2BvUiwWEhmODD2ZyPgwPMjTWUKLN7chGM9I3JHiMoEuKG9ZPGAfCfxwuBm9U4qJqSsaJibZkeBe0n2YcOXNw%2FYcj%2FCOydYELyR34Vy1txGh9E1b8hv2UCHi4bOzCeQRHMv%2BYc%2BAr%2F%2BSer5rZVdXc9pB0kuKA3j7x8t%2Flm%2FWPsUuVx9bHlFP3dMeT4OZ9EA7RuzpfcldCSw6z4ry00kBuLtQPPNwDbUfFoYLQ37a722vej%2Bk4xP1vymsxVO6G4hOv3p2adWaGYqsrcqsrYrStuGqehom6ywoh64hWi3oKLfYb%2FogF%2BcyC9YbfGHs3ukAhHds0d0rd4OqB2aIPWOMEEqxkwJ4VDrebdAlajFjzNZArotNbd7FAUAkxsACs3Gi5tC6w0f5cefdnP0Fmz5KL1wXZ5AhQd0Wwpu%2BijK%2BrDrY94UbOJv4oxU3cpKfrxpx5Ztdvh2HQ5mE9yiL6BVSKVVtOnRMPmcUnj2eRvGWtKLFW3%2BLRlkESva7FgLxIrqAIDhVt4U7HALxAqJ8Kff8AuWb0kvVpQnUOFiRZvNU%2FkimkBrK1e0YfVWfkgFm%2Bjh0tki%2FqDkFKok5LSjzA4s2FKQMoWfVNExGVgBZVa1f4df3FKeMtnEC6LwA1sKQZt%2BbMkqHgzwIDX3zKm5Fj2X%2FVBqLh0HQmru0f2CQ3gBvzizX9C0poN%2BQXt88Iuj%2BwWrHF2FEzLB3zlegVDw2UPBF2ZzC2%2B8oeDWqeZP9GkwLZc3FJw7d31CwV1W7YFQcGUA5E4K8%2FIuq%2FdAKFgi%2FGk3U%2B%2ByQhEQqGS6dnkCFR4K7rIJnqBrV%2B6%2FLG77K8%2BfbOrnLEYRCNti4KYfXZZYjwN0WRe6FB4G7nLES4As%2BXqvNrf1lSdLNtrgongQeVMSTQDCFAA5%2FQiTY%2B8yIMy6EWa%2BtksYY1LKBsb8fPfFb37VGbPH6v4DEodsmG0%2FY6lgA2Pt91lI3njNbXAxSI1wSZ4VeAR4S1PQO%2FGrEfk%2FSMGSVYy%2FbVp3%2BiZwswBwa8fNPTYYwQBP9mwUmnJSKhvFaMibjZKZ4GAyClVpIBnl6G7BhkSuw4%2FAD53dIiNko5w9GyU%2FBi%2BDyQXvmPR0GxP02KgHTHYky0bp8avbsmSj9NigB2SjVAcA%2Fyoh5ac7bDQDslEkwp9%2BM5IScRCtCVSgWlieQIVno%2FTYQAhko1S2P%2F%2FxT8rzJxvcgGwUcXDTji5z6Qb4UiW%2BFJ6OYjRL7HYBdLn%2FtMTcR4EvjSYbcXAzaTWNhgFrnh91GtImq3v87cVeghsaBH5pBP4Lkwr1GS%2Fyrzc9mcJvNEGhkF7iX%2Fl3fTR%2Bo8lqFCDyfwICoFKs2oKVKUDmlwmB%2Bo3AaOweaFRe4aICjQpX%2Bg2DVS5A6q%2BMAIN%2FFqk8ixqsdgFiv0DAaUiasFeDiqQpXu43SuQtAmUe6MFgs4ZVW7CJi79SnRXUflGg05A2OZagwjIXSZe55DIKrHM5umPQKEktHaMOOwvzgrwnO8bzQz8%2Fi3Fzu6KTY7xAD8KzFozHvTOnBkR6zxjp7W6CJD%2FwSWCcl3aFMNeWOM5r8iNNmjivyYo4EOf9BARMbggoP902WRkH4rwyIVC%2FubcJR7XLL1mXp1HxcV6TTeGEOG91BMBh7au2YDM8Ic4rEHAakiYcz64iaYqP85olNuMEyjxgfzifPW8L%2Bsw1XA2XIiuEeUVhTj%2FWtDiSWKSPZikRsqWDOwhn0YowZpzF2m3ZaGn3F7Y3n5P52Mpl0gqP7ECsVnMfJt7QGzh794uHgNn5l0baNOOHJiEYnIPL0x3FaVhwNor8ITOLf%2BItTcjMYhUZCJl9AgJwQsqqLVipBUJmMiFQw3kMnJgiv%2FpXnkbFh8zonALUvyPYH85MWeGKTbFMvASEPzFw048wbRMIU0HCFB8us0ustwXC3G%2F%2F3EmBMA2bjVS8kg4F%2BFIA2jTkS8jJVJEvxZ%2FJadglIgBAmAe6MEjJXLUFGwAIaGQSUkxEwU475ixIc7oOB7MJyoL9EBxPywUHx62t5aRmq8VHjKZxKma0Suynr%2FWQS2DXl3t3fSLjFqt8QWC8OgD4exrVR1wWq3xBWFwi%2FOk39IKTdaXXLMoTqPCYeEHKK6wirWx%2FOFg3bwpWCIM1pOLgph9dwik1CtKl8Ih4QbYs0GVl%2B8MJNXlTsCmvA%2FzAURgtgDLFQE47yiyTHQuUWRfKFB8UL8iOBcasZn6b3%2FyqM2ZBzivkXIsCm35caQE11p8aW8Kp0QYmrNg5wSEzeVOwEr6L4kHkTfduWgF8eDrI6ceHbeDD%2BvNhVzgfdoAPK3ZOsKVF3hSsRo9xARNDEVhTmQjffra%2FfR%2B%2BG8%2BPtv10%2F%2F76%2BHz37wWbNnY%2FW%2B0g9vIUo2g%2FU26xouSZ0vvxtCsrujxuWWQeaRuxfOdOIduIFUIIEr34M6X34%2B8YONvr5VImShd%2BY3aOqEKetCDza5nmVdgSbJaXRlnS0qNPu9EXJH3xyxJ1oc5zpkgXfmMlU74EWV%2FLjK%2FClmATvtTNj5YebNoRJZ3lAlMqxJTnzI4uRlXBUdNAlRXNn7socKVhMrgK1s5lANIUAzv9WLPEdojAmjVhzbMmSBfDqoTiD6S5v%2FfSMi2suClYyd%2BLXyLSxQBZnh9u%2BpElx1aI5zqNDs29JD9cDr9eO1sOX62OliMXlG7zE%2Bnyi2OcSFf2XDwWiJ86wS4%2FeGT9DLu940BpjrCjsN4O1Jc9wc7YqsjarmjHCXZH8wuOIMW5%2FaJZxS%2BOelKjYL8wOb2iA05R0inwZRSGyfrtmL3Hd6GLyB3%2FBw%3D%3D)).
